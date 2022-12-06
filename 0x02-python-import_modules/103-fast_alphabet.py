@@ -1,2 +1,2 @@
-#!/usr/bin/python3
+i!/usr/bin/python3
 import alpha
