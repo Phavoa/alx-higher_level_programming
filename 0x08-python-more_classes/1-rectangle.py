@@ -7,18 +7,18 @@ Defines Rectangle class
 class Rectangle:
     """ Rectangle """
     def __init__(self, width=0, height=0):
-        """ initizing width and height """
-        self.__height = height
-        self.__width = width
+        """ initizie width and height """
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
-        """ getter for width """
+        """ width getter """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """ setter for width """
+        """ width setter """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -27,12 +27,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """ getter for height """
+        """ height getter """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """ setter for  height """
+        """ height setter """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
