@@ -1,4 +1,4 @@
-#!/usr/bi
+#!/usr/bin/python3
 """
 2-is_same_class module
 """
