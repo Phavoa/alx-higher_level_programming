@@ -1,15 +1,10 @@
-#!/usr/bin/python3
-"""
-1-my_list module
-"""
-
-
+#!/usr/bin/pytihon3
 class MyList(list):
-    """
-    MyList child of list
-    """
+    """ initialising the object"""
+    def __init__(self):
+        super().__init__()
+    
+    """ define public instance method """
     def print_sorted(self):
-        """
-        print_sorted - prints the list, but sorted
-        """
+        """ print sorted list """
         print(sorted(self))
