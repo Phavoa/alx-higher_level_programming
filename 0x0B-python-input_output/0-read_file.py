@@ -7,10 +7,10 @@
 
 def read_file(filename=""):
     """
-    Function to read a text file (UTF8) and print its contents to stdout.
+    read_file - reads a text file (UTF8) and print its contents to stdout.
     
     Args:
-        filename (str): Name of the file to be read.
+        filename : Name of the file to be read.
     """
     with open(filename, "r", encoding="UTF-8") as f:
         for line in f:
