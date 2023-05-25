@@ -1,4 +1,4 @@
-!/usr/bin/python3
+#!/usr/bin/python3
 """
 0-read_file module
 """
@@ -10,6 +10,6 @@ def read_file(filename=""):
     Args:
         filename: name of the file
     """
-    with open(filename, "r", encoding="UTF-8") as f:
-        for line in f:
-            print(line, end="")
+    with open(filename, mode= "r", encoding="UTF-8") as f:
+        line = f.read()
+        print(line, end="")
