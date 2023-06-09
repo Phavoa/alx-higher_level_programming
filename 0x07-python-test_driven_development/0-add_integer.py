@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
-module add_integer
-a and b arguments
-returns sum of a and b
+add_integer module
+Provides a function to add two numbers.
 """
 
 
@@ -26,8 +25,3 @@ def add_integer(a, b=98):
         raise TypeError('b must be an integer')
 
     return (int(a) + int(b))
-
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
