@@ -8,7 +8,17 @@ returns sum of a and b
 
 def add_integer(a, b=98):
     """
-    add_integer
+     Returns the sum of two numbers.
+
+    Args:
+        a (int or float): The first number.
+        b (int or float, optional): The second number. Defaults to 98.
+
+    Raises:
+        TypeError: If `a` or `b` is not an integer or float.
+
+    Returns:
+
     """
     if type(a) is not int and type(a) is not float:
         raise TypeError('a must be an integer')
