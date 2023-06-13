@@ -4,11 +4,13 @@
 
 
 def read_file(filename=""):
+
     """
-    read_file - reads a text file (UTF8) and print its contents to stdout.
-    
     Args:
-        filename : filename
+        filename: filename
+
+    Raise
+        Exception: no exception raised
     """
     with open(filename, "r", encoding="UTF-8") as f:
         readfile = f.read()
