@@ -11,8 +11,13 @@ def pascal_triangle(n):
             n (int): number of lists and digits
         Returns: list of lists
     """
-    rows = [[1 for j in range(i + 1)] for i in range(n)]
+    newlist = []
+    for i in range(n):
+        row = [1] * (i + 1)
+        newlist.append(row)
+
     for n in range(n):
         for i in range(n - 1):
-            rows[n][i + 1] = sum(rows[n - 1][i:i + 2])
-    return rows
+            newlist[n][i + 1] = sum(newlist[n - 1][i:i + 2])
+
+    return newlist
