@@ -1,2 +1,0 @@
-list and tuple file
-
