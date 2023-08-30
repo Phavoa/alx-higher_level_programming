@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Create a class named square """
+""" Define a class named square """
 
 class Square:
     """ Define init function """
