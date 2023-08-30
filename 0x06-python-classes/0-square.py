@@ -2,6 +2,6 @@
 """ Define a class named Square """
 
 class Square:
-""" Define an empty class """
+    """ Define an empty class """
     pass
 
