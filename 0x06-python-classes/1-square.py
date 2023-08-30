@@ -2,7 +2,7 @@
 """ Define a class named square """
 
 class Square:
-    """ Define init function """
+    """ Define init function called __init__"""
     def __init__(self, size):
-        """ Initialize size as a privant instance """
+        """ Initialize __size as a privant instance with size """
         self.__size = size
