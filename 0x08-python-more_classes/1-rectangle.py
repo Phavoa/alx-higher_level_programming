@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 """
-Define a class named Rectangle
+Define class Rectangle
 """
+
+
 class Rectangle:
-    """Initialize the class Rectangle"""
+    """ Rectangle """
     def __init__(self, width=0, height=0):
-        """ Set the initial width and height attributes  """
+        """ initialize width and height attributes  """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """
-        Retrieve and return the value of the private attribute __width
-        """
+        """ width getter """
         return self.__width
 
     @width.setter
@@ -28,9 +28,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """
-        Retrieve and return the value of the private attribute __height
-        """
+        """ height getter """
         return self.__height
 
     @height.setter
