@@ -7,7 +7,7 @@ Define class Rectangle
 class Rectangle:
     """ Rectangle """
     def __init__(self, width=0, height=0):
-        """ initialize width and height attributes  """
+        """ initialize width and height  """
         self.width = width
         self.height = height
 
@@ -20,7 +20,7 @@ class Rectangle:
     def width(self, value):
         """ width setter """
         if type(value) is not int:
-            raise TypeError("height must be an integer")
+            raise TypeError("width must be an integer")
         elif value < 0:
             raise ValueError("width must be >= 0")
         else:
