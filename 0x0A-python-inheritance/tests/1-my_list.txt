@@ -1,0 +1,81 @@
+The ``1-my_list`` module
+======================
+
+Using ``MyList``
+-------------------
+
+Importing the function from the module:
+    >>> MyListModified = __import__("1-my_list").MyList
+
+Checking for module docstring:
+    >>> m = __import__("1-my_list").__doc__
+    >>> len(m) > 1
+    True
+
+Checking for class docstring:
+    >>> c = __import__("1-my_list").MyListModified.__doc__
+    >>> len(c) > 1
+    True
+
+Checking for method docstring:
+    >>> mod = __import__("1-my_list").MyListModified.print_sorted.__doc__
+    >>> len(mod) > 1
+    True
+
+Checking that MyListModified inherits from list:
+    >>> issubclass(MyListModified, list)
+    True
+
+Checking for empty list:
+    >>> my_list_instance = MyListModified()
+    >>> my_list_instance.print_sorted()
+    []
+
+Checking that appending works:
+    >>> my_list_instance.append(10)
+    >>> my_list_instance.append(20)
+    >>> my_list_instance.append(30)
+    >>> my_list_instance.append(40)
+    >>> print(my_list_instance)
+    [10, 20, 30, 40]
+
+Checking for list already in correct order:
+    >>> my_list_instance.print_sorted()
+    [10, 20, 30, 40]
+
+Checking for reversed order list:
+    >>> my_list_instance = MyListModified()
+    >>> my_list_instance.append(40)
+    >>> my_list_instance.append(30)
+    >>> my_list_instance.append(20)
+    >>> my_list_instance.append(10)
+    >>> print(my_list_instance)
+    [40, 30, 20, 10]
+    >>> my_list_instance.print_sorted()
+    [10, 20, 30, 40]
+    >>> print(my_list_instance)
+    [40, 30, 20, 10]
+
+Checking for one negative number:
+    >>> my_list_instance.append(-10)
+    >>> my_list_instance.append(50)
+    >>> print(my_list_instance)
+    [40, 30, 20, 10, -10, 50]
+    >>> my_list_instance.print_sorted()
+    [-10, 10, 20, 30, 40, 50]
+    >>> print(my_list_instance)
+    [40, 30, 20, 10, -10, 50]
+
+Checking for all negative numbers:
+    >>> my_list_instance = MyListModified()
+    >>> my_list_instance.append(-100)
+    >>> my_list_instance.append(-20)
+    >>> my_list_instance.append(-70)
+    >>> my_list_instance.append(-200)
+    >>> my_list_instance.append(-80)
+    >>> print(my_list_instance)
+    [-100, -20, -70, -200, -80]
+    >>> my_list_instance.print_sorted()
+    [-200, -100, -80, -70, -20]
+    >>> print(my_list_instance)
+    [-100, -20, -70, -200, -80
