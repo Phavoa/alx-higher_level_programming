@@ -5,9 +5,17 @@
 
 
 class MyInt(int):
+    """
+    class MyInt inherits from int
+    """
     def __eq__(self, other):
-        """ Override the equal operator to return not equal """
+        """
+        equal operator to not equal operator.
+        """
         return super().__ne__(other)
+
     def __ne__(self, other):
-        """ Override the not equal operator to return equal """
+        """
+        not equal operator to equal operator.
+        """
         return super().__eq__(other)
