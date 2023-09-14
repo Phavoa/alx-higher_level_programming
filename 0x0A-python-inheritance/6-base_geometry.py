@@ -9,6 +9,7 @@ class BaseGeometry:
     Represent base geometry.
     """
     def area(self):
-        """raises an exception when called"""
+        """
+        Raises an exception when called
+        """
         raise Exception('area() is not implemented')
-

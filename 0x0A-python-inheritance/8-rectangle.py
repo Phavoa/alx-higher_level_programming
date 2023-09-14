@@ -8,10 +8,13 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 class Rectangle(BaseGeometry):
 
-    """A representation of a rectangle"""
+    """
+    A representation of a rectangle
+    """
 
     def __init__(self, width, height):
-         """Instantiation of the rectangle.
+        """
+        Instantiation of the rectangle.
 
         Args:
             width (int): The width of the Rectangle.
@@ -19,6 +22,5 @@ class Rectangle(BaseGeometry):
         """
         self.integer_validator("width", width)
         self.integer_validator("height", height)
-
         self.__width = width
         self.__height = height
