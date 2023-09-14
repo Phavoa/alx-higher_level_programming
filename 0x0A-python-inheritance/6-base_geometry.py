@@ -5,7 +5,6 @@
 
 
 class BaseGeometry:
-    pass
     """
     Represent base geometry.
     """

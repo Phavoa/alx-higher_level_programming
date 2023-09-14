@@ -1,13 +1,11 @@
 #!/usr/bin/python3
 """
-MyList - child class of list
-print_sorted - prints the list, but sorted
-@list: parent class
+1-my_list module
 """
 
 class MyList(list):
     """
-    MyList child of list
+    MyList child class of list
     """
     def print_sorted(self):
         """

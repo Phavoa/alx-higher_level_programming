@@ -6,12 +6,23 @@
 
 class BaseGeometry:
     """A class with public instance methods area and integer_validator"""
+
     def area(self):
-        """raises an exception when called"""
+        """Raises an exception when called"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """ making sure that value is an integer greater than 0"""
+        """
+        Validates that 'value' is an integer greater than 0.
+
+        Args:
+            name (str): A string representing the name of the value being validated.
+            value (int): The value to be validated.
+
+        Raises:
+            TypeError: If 'value' is not an integer.
+            ValueError: If 'value' is less than or equal to 0.
+        """
         if type(value) is not int:
             raise TypeError("{:s} must be an integer".format(name))
         if value <= 0:
