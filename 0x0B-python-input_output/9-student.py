@@ -27,4 +27,3 @@ class Student:
             Retrieves a dictionary representation of the Student instance.
         """
         return self.__dict__
-
