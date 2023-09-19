@@ -84,8 +84,35 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-     def area(self):
-         """
-         return area of the rectangle.
-         """
+    def area(self):
+        """
+        return area of the rectangle.
+        """
         return self.__width * self.__height
+
+    def display(self):
+        """ print the rectangle with '#' characters."""
+        for i in range(self.__y):
+            print()
+        for j in range(self.__height):
+            for x in range(self.x):
+                print(' ', end='')
+            for k in range(self.width):
+                print("#", end='')
+            print()
+
+    def __str__(self):
+        """
+            returns a string representation of the rectangle
+        """
+        return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id,
+            self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args):
+        """
+        Update the attributes of the rectangle using *args
+        """
+        attributes = ["id", "width", "height", "x", "y"]
+        for i in range(len(args)):
+            if i < len(attributes):
+                setattr(self, attributes[i], args[i])
