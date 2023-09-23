@@ -25,6 +25,17 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
+    def validate_attribute(self, attr_name, value):
+        """
+        checks for value and type error
+        """
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(attr_name))
+        if attr_name in {"width", "height"} and value <= 0:
+            raise ValueError("{} must be > 0".format(attr_name))
+        elif attr_name in {"x", "y"} and value < 0:
+            raise ValueError("{} must be >= 0".format(attr_name))
+
     @property
     def width(self):
         """ get width of the rectangle """
@@ -33,12 +44,8 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """ Set the width of the rectangle """
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        if value <= 0:
-            raise ValueError("width must be > 0")
+        self.validate_attribute('width', value)
         self.__width = value
-
 
     @property
     def height(self):
@@ -48,12 +55,8 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """ Set the height of the rectangle """
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        if value <= 0:
-            raise ValueError("height must be > 0")
+        self.validate_attribute("height", value)
         self.__height = value
-
 
     @property
     def x(self):
@@ -63,12 +66,8 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """ Set the x """
-        if not isinstance(value, int):
-            raise TypeError("x must be an integer")
-        if value < 0:
-            raise ValueError("x must be >= 0")
+        self.validate_attribute("x", value)
         self.__x = value
-
 
     @property
     def y(self):
@@ -78,10 +77,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """ Set the y """
-        if not isinstance(value, int):
-            raise TypeError("y must be an integer")
-        if value < 0:
-            raise ValueError("y must be >= 0")
+        self.validate_attribute("y", value)
         self.__y = value
 
     def area(self):
@@ -121,3 +117,14 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
+
+
+    def to_dictionary(self):
+        """
+        Returns the dictionary representation of a Square.
+        """
+        return {"id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y}
