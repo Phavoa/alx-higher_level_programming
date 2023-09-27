@@ -4,6 +4,8 @@ Define class Rectangle
 """
 
 
+
+
 class Rectangle:
     """ Rectangle """
     def __init__(self, width=0, height=0):
