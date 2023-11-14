@@ -2,7 +2,9 @@
 const argv = process.argv;
 const num = parseFloat(argv[2]);
 if (Number.isInteger(num)) {
-  console.log(`My number: ${num}`);
+  for (i = 0; i < num; i++) {
+    console.log("C is fun");
+  }
 } else {
-  console.log("Not a number")
+  console.log("Missing number of occurrences")
 }
